@@ -54,7 +54,11 @@ class BestSellerItem extends StatelessWidget {
                     width: MediaQuery.sizeOf(context).width * 0.5,
                     child: Text(
                       "J.K.Rowling",
-                      style: Styles.textStyle14.copyWith(color: Colors.grey),
+                      style: Styles.textStyle14.copyWith(
+                        color: Colors.grey,
+                        fontStyle: FontStyle.italic,
+                        fontWeight: FontWeight.w500,
+                      ),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                     ),
