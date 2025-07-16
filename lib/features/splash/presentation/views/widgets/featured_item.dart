@@ -5,8 +5,8 @@ class FeaturedItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.sizeOf(context).height * 0.3,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
       child: AspectRatio(
         aspectRatio: 2.6 / 4,
         child: Container(
