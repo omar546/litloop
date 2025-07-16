@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../../../../../core/utils/app_router.dart';
 import 'custom_book_item.dart';
 
 class FeaturedBooksList extends StatelessWidget {
@@ -13,7 +15,12 @@ class FeaturedBooksList extends StatelessWidget {
         itemCount: 10,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          return CustomBookItem();
+          return GestureDetector(
+            onTap: () {
+              GoRouter.of(context).push(AppRouter.kDetailsView);
+            },
+            child: CustomBookItem(),
+          );
         },
       ),
     );

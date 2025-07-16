@@ -36,7 +36,7 @@ class BookDetailsViewBody extends StatelessWidget {
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),
-          Rating(),
+          Rating(mainAlignment: MainAxisAlignment.center,),
         ],
       ),
     );
