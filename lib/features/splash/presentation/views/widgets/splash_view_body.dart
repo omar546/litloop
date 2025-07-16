@@ -14,6 +14,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   late final Animation<double> _fadeAnimation;
   late final Animation<double> _scaleAnimation;
   late final Animation<Offset> _slideAnimation;
+  late final Animation<double> _textFadeAnimation;
 
   @override
   void initState() {
@@ -39,6 +40,10 @@ class _SplashViewBodyState extends State<SplashViewBody>
       CurvedAnimation(parent: _controller, curve: Curves.easeOut),
     );
 
+    _textFadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(parent: _controller, curve: const Interval(0.6, 1.0, curve: Curves.easeIn)),
+    );
+
     _controller.forward();
   }
 
@@ -51,19 +56,37 @@ class _SplashViewBodyState extends State<SplashViewBody>
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: FadeTransition(
-        opacity: _fadeAnimation,
-        child: SlideTransition(
-          position: _slideAnimation,
-          child: ScaleTransition(
-            scale: _scaleAnimation,
-            child: Image.asset(
-              AssetsData.logo,
-              width: 150,
-              height: 150,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          FadeTransition(
+            opacity: _fadeAnimation,
+            child: SlideTransition(
+              position: _slideAnimation,
+              child: ScaleTransition(
+                scale: _scaleAnimation,
+                child: Image.asset(
+                  AssetsData.logo,
+                  width: 250,
+                  height: 100,
+                ),
+              ),
             ),
           ),
-        ),
+          FadeTransition(
+            opacity: _textFadeAnimation,
+            child: const Text(
+              '"A reader lives a thousand lives before he dies."',
+              style: TextStyle(
+                fontSize: 12,
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.w500,
+                color: Colors.grey,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ],
       ),
     );
   }
