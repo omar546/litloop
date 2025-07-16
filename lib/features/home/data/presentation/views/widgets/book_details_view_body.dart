@@ -20,6 +20,7 @@ class BookDetailsViewBody extends StatelessWidget {
                 BookDetailsSection(),
                 const Spacer(),
                 YouMayLikeSection(),
+                SizedBox(height: 40,),
               ],
             ),
           ),
