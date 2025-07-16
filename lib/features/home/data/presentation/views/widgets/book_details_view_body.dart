@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:litloop/core/utils/styles.dart';
 import 'package:litloop/features/home/data/presentation/views/widgets/rating.dart';
 
+import 'books_action.dart';
 import 'custom_app_bar_details.dart';
 import 'custom_book_item.dart';
 
@@ -16,10 +17,10 @@ class BookDetailsViewBody extends StatelessWidget {
         children: [
           CustomAppBarDetailsView(),
           SizedBox(
-            width: MediaQuery.sizeOf(context).width * 0.5,
+            height: MediaQuery.sizeOf(context).height * 0.3,
             child: CustomBookItem(showPlayButton: false),
           ),
-          const SizedBox(height: 20,),
+          const SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24.0),
             child: Text(
@@ -32,11 +33,16 @@ class BookDetailsViewBody extends StatelessWidget {
           ),
           Text(
             "J.K.Rowling",
-            style: Styles.textStyle18.copyWith(color: Colors.grey,fontStyle: FontStyle.italic,fontWeight: FontWeight.w500),
+            style: Styles.textStyle18.copyWith(
+              color: Colors.grey,
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.w500,
+            ),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),
-          Rating(mainAlignment: MainAxisAlignment.center,),
+          const Rating(mainAlignment: MainAxisAlignment.center),
+          BooksAction(),
         ],
       ),
     );
