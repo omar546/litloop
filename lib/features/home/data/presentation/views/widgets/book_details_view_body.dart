@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:litloop/core/utils/styles.dart';
 import 'package:litloop/features/home/data/presentation/views/widgets/rating.dart';
+import 'package:litloop/features/home/data/presentation/views/widgets/you_may_like_list.dart';
 
 import 'books_action.dart';
 import 'custom_app_bar_details.dart';
@@ -43,6 +44,15 @@ class BookDetailsViewBody extends StatelessWidget {
           ),
           const Rating(mainAlignment: MainAxisAlignment.center),
           BooksAction(),
+          SizedBox(height: 20,),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24.0),
+              child: Text('You may also like', style: Styles.textStyle18),
+            ),
+          ),
+          YouMayLikeList(),
         ],
       ),
     );
