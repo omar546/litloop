@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-class FeaturedItem extends StatelessWidget {
-  const FeaturedItem({super.key});
+class CustomBookItem extends StatelessWidget {
+  final bool showPlayButton;
+  const CustomBookItem({super.key, this.showPlayButton = true});
 
   @override
   Widget build(BuildContext context) {
@@ -22,22 +23,23 @@ class FeaturedItem extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
-              bottom: 8,
-              right: 8,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.grey.withAlpha(200),
-                  shape: BoxShape.circle,
-                ),
-                padding: const EdgeInsets.all(8),
-                child: const Icon(
-                  Icons.play_arrow,
-                  color: Colors.white,
-                  size: 24,
+            if (showPlayButton)
+              Positioned(
+                bottom: 8,
+                right: 8,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.grey.withAlpha(200),
+                    shape: BoxShape.circle,
+                  ),
+                  padding: const EdgeInsets.all(8),
+                  child: const Icon(
+                    Icons.play_arrow,
+                    color: Colors.white,
+                    size: 24,
+                  ),
                 ),
               ),
-            ),
           ],
         ),
       ),
