@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:litloop/features/home/data/presentation/views/home_view.dart';
 import '../../../../../constants.dart';
 import '../../../../../core/utils/assets.dart';
