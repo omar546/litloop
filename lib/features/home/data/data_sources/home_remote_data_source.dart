@@ -2,6 +2,9 @@ import 'package:litloop/core/utils/api_service.dart';
 import 'package:litloop/features/home/data/models/book_model/book_model.dart';
 import 'package:litloop/features/home/domain/entities/book_entity.dart';
 
+import '../../../../constants.dart';
+import '../../../../core/utils/functions/saveBooks.dart';
+
 abstract class HomeRemoteDataSource {
   Future<List<BookEntity>> fetchFeaturedBooks();
 
@@ -19,8 +22,11 @@ class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
       endPoint: 'volumes?Filtering=free-ebooks&q=programming',
     );
     List<BookEntity> books = getBooksList(data);
+    saveBooksData(books, kFeaturedBox);
     return books;
   }
+
+
 
   @override
   Future<List<BookEntity>> fetchNewestBooks() async {
