@@ -11,7 +11,9 @@ class CustomButton extends StatelessWidget {
     super.key,
     required this.backGroundColor,
     required this.textColor,
-     this.borderRadius, required this.text, required this.onPress,
+    this.borderRadius,
+    required this.text,
+    required this.onPress,
   });
 
   @override
@@ -19,7 +21,9 @@ class CustomButton extends StatelessWidget {
     return TextButton(
       onPressed: onPress,
       style: TextButton.styleFrom(
-        shape: RoundedRectangleBorder(borderRadius: borderRadius ?? BorderRadius.circular(12)),
+        shape: RoundedRectangleBorder(
+          borderRadius: borderRadius ?? BorderRadius.circular(12),
+        ),
         backgroundColor: backGroundColor,
       ),
       child: Text(

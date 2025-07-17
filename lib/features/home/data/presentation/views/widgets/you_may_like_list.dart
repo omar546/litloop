@@ -19,7 +19,7 @@ class YouMayLikeList extends StatelessWidget {
             onTap: () {
               GoRouter.of(context).push(AppRouter.kDetailsView);
             },
-            child: CustomBookItem(showPlayButton: false,),
+            child: CustomBookItem(showPlayButton: false),
           );
         },
       ),

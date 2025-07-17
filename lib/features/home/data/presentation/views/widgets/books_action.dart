@@ -13,7 +13,7 @@ class BooksAction extends StatelessWidget {
         children: [
           Expanded(
             child: CustomButton(
-              onPress: (){},
+              onPress: () {},
               text: '19.99 \$',
               backGroundColor: Colors.white,
               textColor: Colors.black,
@@ -25,7 +25,7 @@ class BooksAction extends StatelessWidget {
           ),
           Expanded(
             child: CustomButton(
-              onPress: (){},
+              onPress: () {},
               text: 'Free Preview',
               backGroundColor: Colors.orange,
               textColor: Colors.white,

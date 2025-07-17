@@ -5,7 +5,7 @@ import '../../../../../../core/utils/styles.dart';
 
 class Rating extends StatelessWidget {
   final MainAxisAlignment mainAlignment;
-  const Rating({super.key,this.mainAlignment = MainAxisAlignment.start});
+  const Rating({super.key, this.mainAlignment = MainAxisAlignment.start});
 
   @override
   Widget build(BuildContext context) {
