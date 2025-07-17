@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:litloop/features/home/data/presentation/views/widgets/you_may_like_section.dart';
+import 'package:litloop/features/home/presentation/views/widgets/you_may_like_section.dart';
 
 import 'book_details_section.dart';
 

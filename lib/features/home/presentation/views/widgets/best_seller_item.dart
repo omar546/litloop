@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:litloop/core/utils/app_router.dart';
 import 'package:litloop/core/utils/styles.dart';
-import 'package:litloop/features/home/data/presentation/views/widgets/rating.dart';
+import 'package:litloop/features/home/presentation/views/widgets/rating.dart';
 
 class BestSellerItem extends StatelessWidget {
   const BestSellerItem({super.key});

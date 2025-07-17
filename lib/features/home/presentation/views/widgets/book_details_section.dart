@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:litloop/features/home/data/presentation/views/widgets/rating.dart';
+import 'package:litloop/features/home/presentation/views/widgets/rating.dart';
 
 import '../../../../../../core/utils/styles.dart';
 import 'books_action.dart';

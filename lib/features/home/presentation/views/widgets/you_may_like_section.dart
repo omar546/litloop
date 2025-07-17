@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:litloop/features/home/data/presentation/views/widgets/you_may_like_list.dart';
+import 'package:litloop/features/home/presentation/views/widgets/you_may_like_list.dart';
 
 import '../../../../../../core/utils/styles.dart';
 
