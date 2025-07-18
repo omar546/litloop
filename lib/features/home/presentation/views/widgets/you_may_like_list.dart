@@ -19,7 +19,7 @@ class YouMayLikeList extends StatelessWidget {
             onTap: () {
               GoRouter.of(context).push(AppRouter.kDetailsView);
             },
-            child: CustomBookItem(imageUrl:"",showPlayButton: false),
+            child: CustomBookItem(imageUrl:"https://bukovero.com/wp-content/uploads/2016/07/Harry_Potter_and_the_Cursed_Child_Special_Rehearsal_Edition_Book_Cover.jpg",showPlayButton: false),
           );
         },
       ),

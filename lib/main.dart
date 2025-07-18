@@ -4,7 +4,7 @@ import 'package:hive_flutter/adapters.dart';
 import 'package:litloop/core/utils/app_router.dart';
 import 'package:litloop/core/utils/simple_bloc_observer.dart';
 
-import 'package:litloop/features/home/data/repos/Home_repo_impl.dart';
+import 'package:litloop/features/home/data/repos/home_repo_impl.dart';
 import 'package:litloop/features/home/domain/use_cases/fetch_featured_books_use_case.dart';
 import 'package:litloop/features/home/presentation/manager/featured_books_cubit/featured_books_cubit.dart';
 import 'constants.dart';

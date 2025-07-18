@@ -17,7 +17,7 @@ class BookDetailsSection extends StatelessWidget {
         CustomAppBarDetailsView(),
         SizedBox(
           height: MediaQuery.sizeOf(context).height * 0.3,
-          child: CustomBookItem(imageUrl:"",showPlayButton: false),
+          child: CustomBookItem(showPlayButton: false, imageUrl: 'https://bukovero.com/wp-content/uploads/2016/07/Harry_Potter_and_the_Cursed_Child_Special_Rehearsal_Edition_Book_Cover.jpg',),
         ),
         const SizedBox(height: 20),
         Padding(

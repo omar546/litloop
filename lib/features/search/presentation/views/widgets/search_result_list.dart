@@ -13,7 +13,7 @@ class SearchResultList extends StatelessWidget {
       itemBuilder: (context, index) {
         return Padding(
           padding: const EdgeInsets.only(bottom: 20.0),
-          child: const BestSellerItem(imageUrl: '',),
+          child: const BestSellerItem(imageUrl: '', title: '', price: '', authorName: '',),
         );
       },
     );

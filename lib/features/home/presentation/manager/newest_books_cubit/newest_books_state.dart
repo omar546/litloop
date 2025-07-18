@@ -13,7 +13,19 @@ final class NewestBooksFailure extends NewestBooksState {
   NewestBooksFailure(this.errMessage);
 }
 
-final class NewestBooksSuccess extends NewestBooksState {
+class NewestBooksPaginationLoading extends NewestBooksState {
+  final List<BookEntity> oldBooks;
+
+  NewestBooksPaginationLoading(this.oldBooks);
+}
+
+final class NewestBooksPaginationFailure extends NewestBooksState {
+  final String errMessage;
+
+  NewestBooksPaginationFailure(this.errMessage);
+}
+
+class NewestBooksSuccess extends NewestBooksState {
   final List<BookEntity> books;
 
   NewestBooksSuccess(this.books);

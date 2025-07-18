@@ -6,8 +6,18 @@ import 'package:litloop/core/utils/styles.dart';
 import 'package:litloop/features/home/presentation/views/widgets/rating.dart';
 
 class BestSellerItem extends StatelessWidget {
-  const BestSellerItem({super.key, required this.imageUrl});
+  const BestSellerItem({
+    super.key,
+    required this.imageUrl,
+    required this.title,
+    required this.price,
+    required this.authorName,
+  });
+
   final String imageUrl;
+  final String title;
+  final String authorName;
+  final String price;
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +58,7 @@ class BestSellerItem extends StatelessWidget {
                   SizedBox(
                     width: MediaQuery.sizeOf(context).width * 0.5,
                     child: Text(
-                      "Harry Potter and the Goblet of Fire",
+                      title,
                       style: Styles.textStyle20,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
@@ -57,7 +67,7 @@ class BestSellerItem extends StatelessWidget {
                   SizedBox(
                     width: MediaQuery.sizeOf(context).width * 0.5,
                     child: Text(
-                      "J.K.Rowling",
+                      authorName,
                       style: Styles.textStyle14.copyWith(
                         color: Colors.grey,
                         fontStyle: FontStyle.italic,
@@ -72,7 +82,7 @@ class BestSellerItem extends StatelessWidget {
                     children: [
                       SizedBox(
                         child: Text(
-                          "19.99 \$",
+                          price,
                           style: Styles.textStyle20.copyWith(
                             fontWeight: FontWeight.bold,
                           ),
