@@ -38,7 +38,6 @@ UI widgets, views, and Cubit state management
 ✔️ Fetches featured and newest books from the API
 ✔️ Stores results in Hive cache
 ✔️ animated splash screen
-❌ Search and details are just placeholders
 
 
 <img width="1080" height="1080" alt="on git hub show apps" src="https://github.com/user-attachments/assets/57fd80a7-dd4f-4a5b-8596-b041da8a97c6" />
@@ -62,7 +61,7 @@ lib/
 │   │   ├── domain/            # Entities, use cases, repository contracts
 │   │   └── presentation/      # Cubits, views, widgets
 │   │
-│   ├── search/                # Placeholder only
+│   ├── search/               
 │   └── splash/                
 │
 ├── constants.dart
