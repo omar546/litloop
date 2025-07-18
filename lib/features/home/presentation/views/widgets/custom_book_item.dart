@@ -1,8 +1,16 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class CustomBookItem extends StatelessWidget {
   final bool showPlayButton;
-  const CustomBookItem({super.key, this.showPlayButton = true});
+
+  const CustomBookItem({
+    super.key,
+    this.showPlayButton = true,
+    required this.imageUrl,
+  });
+
+  final String imageUrl;
 
   @override
   Widget build(BuildContext context) {
@@ -15,12 +23,14 @@ class CustomBookItem extends StatelessWidget {
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
-                image: const DecorationImage(
-                  fit: BoxFit.fill,
-                  image: NetworkImage(
-                    'https://bukovero.com/wp-content/uploads/2016/07/Harry_Potter_and_the_Cursed_Child_Special_Rehearsal_Edition_Book_Cover.jpg',
-                  ),
-                ),
+              ),
+              clipBehavior: Clip.hardEdge,
+              // clip the image within the border radius
+              child: CachedNetworkImage(
+                imageUrl: imageUrl,
+                fit: BoxFit.fill,
+                width: double.infinity,
+                height: double.infinity,
               ),
             ),
             if (showPlayButton)

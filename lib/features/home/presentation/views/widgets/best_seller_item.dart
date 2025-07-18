@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:litloop/core/utils/app_router.dart';
@@ -5,7 +6,8 @@ import 'package:litloop/core/utils/styles.dart';
 import 'package:litloop/features/home/presentation/views/widgets/rating.dart';
 
 class BestSellerItem extends StatelessWidget {
-  const BestSellerItem({super.key});
+  const BestSellerItem({super.key, required this.imageUrl});
+  final String imageUrl;
 
   @override
   Widget build(BuildContext context) {
@@ -24,13 +26,15 @@ class BestSellerItem extends StatelessWidget {
                 aspectRatio: 2.5 / 4,
                 child: Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    image: const DecorationImage(
-                      fit: BoxFit.fill,
-                      image: NetworkImage(
-                        'https://bukovero.com/wp-content/uploads/2016/07/Harry_Potter_and_the_Cursed_Child_Special_Rehearsal_Edition_Book_Cover.jpg',
-                      ),
-                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  clipBehavior: Clip.hardEdge,
+                  // clip the image within the border radius
+                  child: CachedNetworkImage(
+                    imageUrl: imageUrl,
+                    fit: BoxFit.fill,
+                    width: double.infinity,
+                    height: double.infinity,
                   ),
                 ),
               ),

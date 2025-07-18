@@ -36,14 +36,14 @@ class LitLoopApp extends StatelessWidget {
           create: (context) {
             return FeaturedBooksCubit(
               FetchFeaturedBooksUseCase(getIt.get<HomeRepoImpl>()),
-            );
+            )..fetchFeaturedBooks();
           },
         ),
         BlocProvider(
           create: (context) {
             return NewestBooksCubit(
               FetchNewestBooksUseCase(getIt.get<HomeRepoImpl>()),
-            );
+            )..fetchNewestBooks();
           },
         ),
       ],

@@ -17,7 +17,7 @@ class BookDetailsSection extends StatelessWidget {
         CustomAppBarDetailsView(),
         SizedBox(
           height: MediaQuery.sizeOf(context).height * 0.3,
-          child: CustomBookItem(showPlayButton: false),
+          child: CustomBookItem(imageUrl:"",showPlayButton: false),
         ),
         const SizedBox(height: 20),
         Padding(
