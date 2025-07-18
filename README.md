@@ -63,7 +63,7 @@ lib/
 │   │   └── presentation/      # Cubits, views, widgets
 │   │
 │   ├── search/                # Placeholder only
-│   └── splash/                # Placeholder only
+│   └── splash/                
 │
 ├── constants.dart
 └── main.dart
